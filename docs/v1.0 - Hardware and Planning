@@ -1,0 +1,27 @@
+# v1.0 – Hardware and Initial Planning
+
+## 🎯 Objective
+I kicked off `somaniserver` by setting clear goals: build a modular, private infrastructure that gives me full control over services, data, and system behavior — without relying on any public cloud.
+
+## 🧱 Hardware Setup
+I’m using repurposed consumer-grade hardware for this build. It’s simple, efficient, and powerful enough to run Proxmox with virtual machines for all key services.
+
+| Component     | Specs                         |
+|---------------|-------------------------------|
+| CPU           | Intel Core i3-6100T           |
+| RAM           | 20GB DDR4                     |
+| Storage       | 2×2TB HDD (ZFS Mirror) for main pool, 500GB HDD for Proxmox local storage |
+
+This setup balances energy efficiency with reliability and ensures redundancy for important data using ZFS mirror.
+
+## 📐 Planning Overview
+From the start, I planned to:
+  - Use [**Proxmox VE**](https://www.proxmox.com/en/) as the hypervisor for managing VMs
+  - Run [**TrueNAS SCALE**](https://www.truenas.com/truenas-community-edition/) in a VM to manage the ZFS mirror pool and NFS shares
+  - Create an [**Ubuntu Server VM**](https://ubuntu.com/server) to host containerized services like [Immich](https://immich.app/), [Nextcloud](https://nextcloud.com/home-users/), and [Kasm](https://kasmweb.com/community-edition) via [Docker](https://www.docker.com/)
+  - Mount storage from TrueNAS to Ubuntu over [**NFS**](https://en.wikipedia.org/wiki/Network_File_System), keeping all data centralized and protected
+
+## 🔄 Version Note
+This marks the foundation of the project. I created the `somaniserver` GitHub repository to document my progress and version every milestone — from hardware assembly to service deployment.
+
+I'm actively working on this system, and v1.0 reflects the initial planning and setup stage that made everything else possible.
