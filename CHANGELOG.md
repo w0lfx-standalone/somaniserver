@@ -22,3 +22,10 @@
   - TrueNAS SCALE – 5.5GB RAM, 1 vCPU, 80GB boot disk  
   - Ubuntu Server – 13GB RAM, 2 vCPUs, 110GB boot disk  
 - Verified boot, network access, and baseline performance of both VMs
+
+## v1.2 – TrueNAS Setup and Pool Management (19/09/2025)
+- Installed and configured TrueNAS SCALE as the storage VM  
+- Created ZFS mirror pool(RAIDz1) `swimming_pool` with 2×2TB HDDs for redundancy  
+- Provisioned datasets for Immich, Nextcloud, Seafile, Kasm, and Media  
+- Set up NFS sharing and UID/GID mapping for consistent access from Ubuntu VM  
+- Validated pool resiliency and dataset permissions  
