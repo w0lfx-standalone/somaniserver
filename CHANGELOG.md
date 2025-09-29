@@ -28,4 +28,16 @@
 - Created ZFS mirror pool(RAIDz1) `swimming_pool` with 2×2TB HDDs for redundancy  
 - Provisioned datasets for Immich, Nextcloud, Seafile, Kasm, and Media  
 - Set up NFS sharing and UID/GID mapping for consistent access from Ubuntu VM  
-- Validated pool resiliency and dataset permissions  
+- Validated pool resiliency and dataset permissions
+
+## v1.3 – Setting up Immich (29/09/2025)
+
+- Deployed Immich on Ubuntu Server VM for private media management
+- Integrated TrueNAS ZFS pool via NFS mount for persistent storage
+- Configured Docker containers for Immich, PostgreSQL, and Redis
+- Applied UID/GID mapping (3000:3001) across mounts for consistent access
+- Enabled persistent volumes for the database and configured automated database dumps
+- Implemented healthchecks and dependency conditions to ensure Immich waits for PostgreSQL & Redis before startup
+- Verified file uploads, container persistence, and database backup execution
+- Immich is now fully operational with redundant photo storage on the ZFS mirror
+- Establishes a modular foundation for adding further services into the homelab
