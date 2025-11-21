@@ -41,3 +41,14 @@
 - Verified file uploads, container persistence, and database backup execution
 - Immich is now fully operational with redundant photo storage on the ZFS mirror
 - Establishes a modular foundation for adding further services into the homelab
+
+## v1.4 – Setting up Seafile (22/11/2025)
+
+- Deployed Seafile on Ubuntu Server VM for private file syncing and sharing
+- Integrated TrueNAS ZFS pool via NFS mount for persistent storage
+- Configured Docker containers for Seafile and its dependencies
+- Applied UID/GID mapping (3000:3001) for consistent access
+- Enabled persistent volumes for Seafile data and database
+- Created a systemd service to manage the Seafile stack automatically
+- Verified file syncing, container persistence, and auto-start functionality
+- Seafile is now fully operational, providing a reliable and private file-syncing solution
