@@ -52,3 +52,19 @@
 - Created a systemd service to manage the Seafile stack automatically
 - Verified file syncing, container persistence, and auto-start functionality
 - Seafile is now fully operational, providing a reliable and private file-syncing solution
+
+## v1.5 – Full Throttle: Automation, Secure Access, Kasm & Network Security (25/04/2026)
+
+- **Infrastructure Resilience:**
+  - Configured BIOS **Auto Power-On** for hardware recovery after power loss.
+  - Implemented **Proxmox Boot Sequencing** (TrueNAS → Ubuntu) with a 60-second delay to ensure storage availability.
+- **Advanced Service Automation:**
+  - Migrated Docker Compose stacks to **systemd** service units with `network-online.target` dependencies for reliable boot-time mounting.
+- **Zero-Exposure Remote Access:**
+  - Deployed **Tailscale** across the entire stack for encrypted access to all nodes without port forwarding or public DNS exposure.
+- **Secure Computing with Kasm:**
+  - Deployed **Kasm Workspaces** (Docker) with persistent user data mapped to the redundant **ZFS mirror pool**.
+- **Network-Wide Security & Privacy:**
+  - Deployed **AdGuard Home** on a Raspberry Pi Zero 2 W for network-wide DNS filtering.
+  - Configured **Unbound** as a local recursive resolver to eliminate reliance on upstream DNS providers.
+  - Integrated with **Tailscale DNS** to provide encrypted, filtered DNS resolution for remote devices.
